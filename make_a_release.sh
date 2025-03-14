@@ -43,10 +43,10 @@ ask_question() {
 	while true; do
 		printf "%s\n" "$question (yes/no)?"
 		IFS= read answer
-		if [ "$answer" == "yes" ]; then
+		if [ "$answer" = "yes" ]; then
 			printf "%s\n" "Very good!"
 			return
-		elif [ "$answer" == "no" ]; then
+		elif [ "$answer" = "no" ]; then
 			printf "%s\n" "Please, do that!"
 			exit 1
 		else
